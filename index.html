@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>TVT</title>
+	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body ng-app="tvt-app">
+
+<header class="app-header">
+	<div class="logo">TV Tracker</div>
+	<nav>
+		<ul>
+			<li>
+				<a href="#!/">What's on <div class="arrow-up"></div></a>
+			</li>
+			<li>
+				<a href="#!/my-shows">My Shows <div class="arrow-up"></div></a>
+			</li>
+			<li>
+				<a href="#!/search">Search <div class="arrow-up"></div></a>
+			</li>
+		</ul>
+	</nav>
+</header>
+
+<main class="main-container container" ng-view=""></main>
+
+
+<script src="node_modules/angular/angular.js"></script>
+<script src="node_modules/angular-route/angular-route.min.js"></script>
+<script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
+
+<script src="assets/js/app.js"></script>
+<script src="assets/js/app.routes.js"></script>
+<script src="assets/js/app.core.js"></script>
+
+</body>
+</html>
