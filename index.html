@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="tvt-app">
 <head>
 	<meta charset="UTF-8">
 	<title>TVT</title>
 	<link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
 	<link rel="stylesheet" href="assets/css/main.css">
 </head>
-<body ng-app="tvt-app">
+<body>
 
 <header class="app-header">
 	<div class="logo">TV Tracker</div>
@@ -25,7 +25,7 @@
 	</nav>
 </header>
 
-<main class="main-container container" ng-view=""></main>
+<main class="main-container container" ng-view></main>
 
 
 <script src="node_modules/angular/angular.js"></script>
@@ -33,15 +33,17 @@
 <script src="node_modules/angular-ui-bootstrap/dist/ui-bootstrap-tpls.js"></script>
 
 <script src="assets/js/app.js"></script>
-<script src="assets/js/app.routes.js"></script>
 <script src="assets/js/app.core.js"></script>
+<script src="assets/js/app.routes.js"></script>
 <script src="assets/js/app.services.js"></script>
+
+<!--SERVICES-->
+<script src="services/show.fct.js"></script>
 
 <script src="sections/my-shows/my-shows-ctrl.js"></script>
 <script src="sections/search/search.ctrl.js"></script>
 <script src="sections/show/show.ctrl.js"></script>
 <script src="sections/whats-on/whats-on.ctrl.js"></script>
-<script src="services/show.fct.js"></script>
 
 </body>
 </html>

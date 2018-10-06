@@ -1,6 +1,4 @@
 angular
-	.module('app.core',
-		[
+		.module('app.core', [
 				'ui.bootstrap',
-				'app.services',
 		]);

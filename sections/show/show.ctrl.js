@@ -1,5 +1,8 @@
-angular.
-		module('app.core', []).
-		controller('ShowController', function() {
+angular
+		.module('app.core')
+		.controller('ShowController', function() {
+				'ngInject';
+
 				var vm = this;
+
 		});

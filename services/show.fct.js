@@ -1,8 +1,8 @@
-angular.
-		module('app.services', []).
-		constant('API_KEY', '87de9879e74c828116acce677f6f255b').
-		constant('BASE_URL', 'http://api.themoviedb.org/3').
-		factory('ShowService', dataService);
+angular
+		.module('app.services', [])
+		.constant('API_KEY', '87de9079e74c828116acce677f6f255b')
+		.constant('BASE_URL', 'http://api.themoviedb.org/3')
+		.factory('ShowService', dataService);
 
 function dataService($http, API_KEY, BASE_URL, $log) {
 		function makeRequests(url, params) {
@@ -36,8 +36,16 @@ function dataService($http, API_KEY, BASE_URL, $log) {
 
 				return error;
 		}
+		
+		function search(query) {
+				return makeRequests('search/tv', {query: query}).
+						then((res) => {
+								return res.results;
+						});
+		}
 
 		return {
-				'get': get
+				'get': get,
+				'search': search,
 		};
 }
